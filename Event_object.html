@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">Click me</a>
+    <div>Sorry</div>
+    <script src="js/jquery.js"></script>
+    <script>
+        $("a").click(function(){
+            alert(event.pageX);
+            event.parentDefault();
+        });
+        $("div").click(function(){
+            alert("cllicked")
+        });
+        $("div").trigger("click");
+    </script>
+</body>
+</html>

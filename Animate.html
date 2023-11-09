@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="hide">click here</p>
+    <div id="hide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat accusantium et nisi, consequuntur eligendi qui recusandae ut unde corporis eum, quo voluptate soluta dolorem magnam aspernatur facere facilis vero officiis!</div>
+    <p class="fade">clik to fade</p>
+    <div id="fade">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, minus!</div>
+    <p class="slide">click to slide</p>
+    <div id="slide">Ram<br/>Raja<br/>Sri<br/></div>
+    <script src="js/jquery.js"></script>
+    <script>
+    $(function(){
+        $(".hide").click(function(){
+            $("#hide").toggle(1000,ram);
+        });
+    });
+    function ram(){
+        $("#hide").show(1000);
+    };
+    $(function(){
+        $(".fade").click(function(){
+            $("#fade").fadeToggle(1000);
+        });
+    });
+    $(function(){
+        $(".slide").click(function(){
+            $("#slide").slideToggle(500);
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        click me 
+    </div>
+    <input type="text" id="name"/>
+    <div id="msg"></div>
+    <P>click</P>
+    <script src="js/jquery.js"></script>
+    <script>
+     $(function(){
+        $("#demo").click(function(){
+            $("body").html(Date());
+    });
+    });
+    $(function(){
+        $("#name").keydown(function(){
+            $("#msg").html($("#name").val());
+        });
+    });
+    $("p").on("dblclick",function(){
+        alert("clicked");
+        $("p").off("dblclick");
+    });
+    
+    </script>
+</body>
+</html>

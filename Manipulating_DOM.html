@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> div element
+        <P class="first">paragraph</P>
+        <p>raja</p>
+    </div>
+    <button>click to erase</button>
+    <p style="color:red">red</p>
+    <p style="color:green">green</p>
+    <p style="color:blue">blue</p>
+    <script src="js/jquery.js"></script>
+    <script>
+        var e = $(".first").parent();
+        e.css("border","2px solid red");
+        $("p").eq(2).remove();
+        $(function(){
+            $("button").click(function(){
+                $("div").empty();
+            });
+        });
+    </script>
+</body>
+</html>

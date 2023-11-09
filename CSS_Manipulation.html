@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Manipulating CSS</title>
+	<style>
+	.header
+	{
+		color:blue;
+		font-size:x-large;
+	}
+	.red
+	{
+		color:red;
+		font-weight: bold;
+	}
+	.CSS
+	{
+		background-color: red;
+		color:white;
+	}
+	.div
+	{
+		background-color: red;
+	}
+</style>
+</head>
+<body>
+	<p>Some text</p>
+	<div class="div">Toggle class</div>
+	<p class="CSS">CSS properties</p>
+	<button> Click to toggle</button>
+	<p class="ram">to change height</p>
+	<button class="button">Rotate height</button>
+	<div class="sri">
+		<p>paragraph</p>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(function(){
+			$("p:first").addClass("header");
+		});
+		$(function(){
+			$("button").click(function(){
+				$("div").toggleClass("red");
+			});
+		});
+		$(function(){
+			alert($(".CSS").css("background-color")
+			);
+			$(".CSS").css("background-color","blue");
+		});
+		$("div").height(100);
+		$(".button").click(function(){
+			$(".ram").height(20);
+		});
+	</script>
+</body>
+</html>
